@@ -1,9 +1,10 @@
+<% provide(:title, "About") %>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About | my Mini Social-media app</title>
+    <title><%= yield(:title)%> | my Mini Social-media app</title>
   </head>
   <body>
-    <h1>Home</h1>
+    <h1><%= yield(:title)%></h1>
   </body>
 </html>
