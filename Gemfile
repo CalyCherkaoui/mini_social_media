@@ -5,12 +5,13 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-gem 'puma',       '4.3.5'
-gem 'sass-rails', '6.0.0'
-gem 'webpacker',  '4.2.2'
-gem 'turbolinks', '5.2.1'
-gem 'jbuilder',   '2.10.0'
-gem 'bootsnap',   '1.4.6', require: false
+gem 'bootstrap-sass', '3.4.1'
+gem 'puma',           '4.3.5'
+gem 'sass-rails',     '6.0.0'
+gem 'webpacker',      '4.2.2'
+gem 'turbolinks',     '5.2.1'
+gem 'jbuilder',       '2.10.0'
+gem 'bootsnap',       '1.4.6', require: false
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
