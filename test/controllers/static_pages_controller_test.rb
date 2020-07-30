@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "my Mini Social-media app"
+    @base_title = "Mini Social-media app"
   end
 
   test "should get root" do
