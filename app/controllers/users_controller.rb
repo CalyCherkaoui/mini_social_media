@@ -16,7 +16,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # sucsseful save
+      flash[:success] = "Welcome #{@user.name} to this mini Social media app!"
+      redirect_to @user # the same as redirect_to user_url(@user)
     else
+      # invalid submission
       render 'new'
     end
   end
