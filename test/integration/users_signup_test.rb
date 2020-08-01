@@ -26,4 +26,32 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # re-renders the new action
     assert_template 'users/new'
   end
+
+
+#   As with assert_no_difference , the first argument is the string 'User.-
+# count' , which arranges for a comparison between User.count before and
+# after the contents of the assert_difference block. The second (optional)
+# argument specifies the size of the difference (in this case, 1)
+
+  test 'valid signup information' do
+    get signup_path
+    assert_difference 'User.count', 1 do
+      post users_path, params: {
+        user: {
+          name: "Test User",
+          email: "valid@email.com",
+          password: "foobar",
+          password_confirmation: "foobar"
+        }
+      }
+    end
+
+    # we use the follow_redirect!
+    # method after posting to the users path. This simply arranges to follow the redi-
+    # rect after submission, resulting in a rendering of the 'users/show' template.
+
+    follow_redirect!
+    assert_template 'users/show'
+  end
+
 end
