@@ -1,2 +1,18 @@
 <% provide(:title, 'Sign up') %>
 <h1><%= yield(:title)%></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= f.label :name, "Type your name:"%>
+      <%= f.text_field :name %>
+      <%= f.label :email, "Enter a valid Email:" %>
+      <%= f.email_field :email %>
+      <%= f.label :password, "Enter your password with at least 6 characters" %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation, "Confirm your password" %>
+      <%= f.password_field :password_confirmation %>
+      <%= f.submit "Create account", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>
