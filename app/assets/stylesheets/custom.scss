@@ -6,25 +6,44 @@
 $my_gray: #777;
 $my_blue_light: aquamarine;
 
+/* Mixins */
+
+@mixin box-sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box-sizing;
+  border-radius: 3px;
+}
+
 /* universal */
 body {
-padding-top: 60px;
+  padding-top: 60px;
 }
 
 section {
-overflow: auto;
+  overflow: auto;
 }
 
 textarea {
-resize: vertical;
+  resize: vertical;
 }
 
 .center {
-text-align: center;
+  text-align: center;
 }
 
 .center h1 {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .center {
